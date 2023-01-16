@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Libraries
+
+[react-responsive-carousel](https://www.npmjs.com/package/react-responsive-carousel)
+
+[material UI](https://mui.com/material-ui/getting-started/installation/)
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
