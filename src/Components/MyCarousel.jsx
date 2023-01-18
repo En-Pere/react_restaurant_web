@@ -17,7 +17,15 @@ function MyCarousel() {
   ];
 
   return (
-    <Carousel sx={{ width: "100%", heigh: "auto" }}>
+    <Carousel
+      sx={{ aspectRatio: "1.5" }}
+      indicatorContainerProps={{
+        style: {
+          marginTop: "50px", // 5
+          textAlign: "right", // 4
+        },
+      }}
+    >
       {items.map((item, i) => (
         <Item key={i} item={item} />
       ))}
