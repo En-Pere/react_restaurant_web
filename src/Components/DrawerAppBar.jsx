@@ -48,10 +48,10 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav">
-        <Toolbar sx={{ justifyContent: "space-between" }}>
+      <AppBar component="nav" sx={{ backgroundColor: "white" }}>
+        <Toolbar sx={{ justifyContent: "space-around" }}>
           <IconButton
-            color="inherit"
+            color="#000"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
@@ -65,7 +65,7 @@ function DrawerAppBar(props) {
           </Box>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
+              <Button key={item} sx={{ color: "#000" }}>
                 {item}
               </Button>
             ))}
@@ -92,7 +92,7 @@ function DrawerAppBar(props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main" sx={{ p: 3 }}>
+      <Box component="main" sx={{ p: 3, padding: 0 }}>
         <Toolbar />
       </Box>
     </Box>
