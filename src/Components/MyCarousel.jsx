@@ -6,23 +6,24 @@ import "../Styles/mycarousel.css";
 function MyCarousel() {
   var items = [
     {
-      img: "/images/1.jpg",
+      img: "/images/b-1.jpg",
     },
     {
-      img: "/images/2.jpg",
+      img: "/images/b-2.jpg",
     },
     {
-      img: "/images/3.jpg",
+      img: "/images/b-3.jpg",
     },
   ];
 
   return (
     <Carousel
-      sx={{ aspectRatio: "1.5" }}
+      sx={{ aspectRatio: "2.4" }}
       indicatorContainerProps={{
         style: {
-          marginTop: "50px", // 5
-          textAlign: "right", // 4
+          position: "absolute",
+          bottom: "50px",
+          zIndex: "5",
         },
       }}
     >

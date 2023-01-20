@@ -1,5 +1,23 @@
 .grid-container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.separator-column {
+  border: 3px dotted blue;
+}
+
+.column-a {
+  font-size: 4em;
+  line-height: 78px;
+  font-family: sans-serif;
+}
+
+.column-a,
+.column-b,
+.column-c {
+  margin: 10px;
+  max-width: 325px;
+  height: auto;
 }

@@ -27,7 +27,7 @@ function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <img src="logoRest.png" alt="logo restaurant" />
+      <img src="/images/logo.png" alt="Logo" />
 
       <Divider />
       <List>
@@ -61,7 +61,7 @@ function DrawerAppBar(props) {
           </IconButton>
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <img src="logoRest.png" alt="logo restaurant" />
+            <img src="/images/logo.png" alt="Logo" />
           </Box>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
