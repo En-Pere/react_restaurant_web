@@ -12,11 +12,12 @@
 }
 
 .main-container-lacarte {
-  width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 2px solid black;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
 }
 
 .menu1 {
@@ -25,4 +26,60 @@
   padding-top: 32px;
   width: 590px;
   height: 382px;
+}
+
+.menu2y3 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row;
+  margin-top: 80px;
+  align-items: flex-end;
+}
+
+.menu2 {
+  background: white;
+  height: 330px;
+  width: 280px;
+  margin-right: 40px;
+  margin-top: 40px;
+}
+
+.menu3 {
+  background: white;
+  height: 660px;
+  width: 630px;
+}
+
+.menu4y5y6 {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.menu4 {
+  background: white;
+  height: 890px;
+  width: 590px;
+  margin-right: 40px;
+}
+
+.menu5y6 {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu5 {
+  background: white;
+  height: 330px;
+  width: 240px;
+  margin-top: 40px;
+}
+
+.menu6 {
+  background: white;
+  height: 300px;
+  width: 300px;
+  margin-top: 40px;
 }

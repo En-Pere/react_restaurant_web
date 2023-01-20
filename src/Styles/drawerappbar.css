@@ -2,4 +2,5 @@ img {
   width: 135px;
   height: auto;
   display: flex;
+  margin: 10px;
 }
