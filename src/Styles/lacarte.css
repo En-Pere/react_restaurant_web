@@ -1,4 +1,4 @@
-.lacarte-background {
+/* .lacarte-background {
   background-image: url("/public/images/bg-carte.jpg");
   height: auto;
   font-size: 4em;
@@ -30,7 +30,7 @@
 
 .menu2y3 {
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   flex-direction: row;
   margin-top: 80px;
   align-items: flex-end;
@@ -41,13 +41,13 @@
   height: 330px;
   width: 280px;
   margin-right: 40px;
-  margin-top: 40px;
 }
 
 .menu3 {
   background: white;
   height: 660px;
   width: 630px;
+  margin-top: 40px;
 }
 
 .menu4y5y6 {
@@ -82,4 +82,4 @@
   height: 300px;
   width: 300px;
   margin-top: 40px;
-}
+} */

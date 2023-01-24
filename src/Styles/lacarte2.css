@@ -1,0 +1,49 @@
+p {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.lacarte-background {
+  background-image: url("/public/images/bg-carte.jpg");
+  height: auto;
+  width: 100%;
+  font-size: 4em;
+  line-height: 78px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+  padding-top: 25px;
+  position: absolute;
+  z-index: 1;
+}
+
+.main-container-lacarte {
+  border: 2px solid black;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  z-index: 1;
+}
+
+.menu1,
+.menu2,
+.menu3,
+.menu4,
+.menu5,
+.menu6 {
+  text-align: center;
+  border: 2px solid black;
+  font-size: 45px;
+  background: white;
+}
+
+/* FISHES */
+
+#fish-one {
+  width: 45%;
+  z-index: -1;
+  position: absolute;
+  left: 30px;
+  top: 50px;
+}
