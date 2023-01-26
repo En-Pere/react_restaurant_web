@@ -4,7 +4,7 @@ p {
 }
 
 .lacarte-background {
-  background-image: url("/public/images/bg-carte.jpg");
+  background-color: #f3ece7;
   height: auto;
   width: 100%;
   font-size: 4em;
@@ -15,12 +15,12 @@ p {
   align-items: center;
   margin-top: 35px;
   padding-top: 25px;
-  position: absolute;
+  position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 
 .main-container-lacarte {
-  border: 2px solid black;
   margin-top: 70px;
   margin-bottom: 70px;
   z-index: 1;
@@ -33,9 +33,10 @@ p {
 .menu5,
 .menu6 {
   text-align: center;
-  border: 2px solid black;
+  border-radius: 5px;
   font-size: 45px;
   background: white;
+  padding: 5px;
 }
 
 /* FISHES */
@@ -46,4 +47,60 @@ p {
   position: absolute;
   left: 30px;
   top: 50px;
+}
+
+#fish-two {
+  width: 40%;
+  z-index: -1;
+  position: absolute;
+  left: 65%;
+  top: 40%;
+}
+
+#fish-three {
+  width: 45%;
+  z-index: -1;
+  position: absolute;
+  left: 7%;
+  top: 30%;
+}
+
+#fish-four {
+  width: 35%;
+  z-index: -1;
+  position: absolute;
+  left: 10%;
+  top: 90%;
+}
+
+#fish-five {
+  width: 40%;
+  z-index: -1;
+  position: absolute;
+  left: 40%;
+  top: 75%;
+}
+
+#fish-six {
+  width: 25%;
+  z-index: -1;
+  position: absolute;
+  left: 75%;
+  top: 0%;
+}
+
+#fish-seven {
+  width: 45%;
+  z-index: -1;
+  position: absolute;
+  left: 30%;
+  top: 50%;
+}
+
+#fish-eight {
+  width: 33%;
+  z-index: -1;
+  position: absolute;
+  left: 60%;
+  top: 14%;
 }

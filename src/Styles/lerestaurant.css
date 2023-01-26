@@ -1,0 +1,18 @@
+.lerestaurant-section {
+  font-size: 45px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.lerestaurant-image-container {
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lerestaurant-image-container img {
+  width: auto;
+}
+
+

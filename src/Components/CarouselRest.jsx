@@ -3,19 +3,7 @@ import Carousel from "react-material-ui-carousel";
 import { Paper } from "@mui/material";
 import "../Styles/mycarousel.css";
 
-function MyCarousel() {
-  var items = [
-    {
-      img: "/images/b-1.jpg",
-    },
-    {
-      img: "/images/b-2.jpg",
-    },
-    {
-      img: "/images/b-3.jpg",
-    },
-  ];
-
+function CarouselRest({items}) {
   return (
     <Carousel
       sx={{ aspectRatio: "2.4" }}
@@ -44,4 +32,4 @@ function Item(props) {
   );
 }
 
-export default MyCarousel;
+export default CarouselRest;
