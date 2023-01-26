@@ -1,9 +1,9 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import { Paper } from "@mui/material";
-import "../Styles/mycarousel.css";
+import "../Styles/carouselrest.css";
 
-function CarouselRest({items}) {
+function CarouselRest({ items }) {
   return (
     <Carousel
       sx={{ aspectRatio: "2.4" }}

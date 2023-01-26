@@ -27,7 +27,7 @@ function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <img src="/images/logo.png" alt="Logo" />
+      <img src="/images/logo.png" alt="Logo" className="logo-image" />
 
       <Divider />
       <List>
@@ -53,15 +53,14 @@ function DrawerAppBar(props) {
           <IconButton
             color="#000"
             aria-label="open drawer"
-            edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ display: { sm: "none" } }}
           >
             <MenuIcon />
           </IconButton>
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <img src="/images/logo.png" alt="Logo" />
+            <img src="/images/logo.png" alt="Logo" className="logo-image" />
           </Box>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
