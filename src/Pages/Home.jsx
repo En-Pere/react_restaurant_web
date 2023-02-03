@@ -5,6 +5,7 @@ import LaCarte2 from "../Components/LaCarte2";
 import LeRestaurant from "../Components/LeRestaurant";
 import CarouselRest from "../Components/CarouselRest";
 import ContactSection from "../Components/ContactSection";
+import ThemeChange from "../Components/ThemeChange";
 
 function Home() {
   var itemsA = [
@@ -39,6 +40,7 @@ function Home() {
       <LeRestaurant />
       <CarouselRest items={itemsB} />
       <ContactSection />
+      <ThemeChange />
     </>
   );
 }
