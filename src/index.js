@@ -5,7 +5,7 @@ import "./index.css";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { createContext, useState } from "react";
 
-const DEFAULT_THEME = "light";
+export const DEFAULT_THEME = "light";
 
 const getDesignPalette = (mode) => ({
   palette: {

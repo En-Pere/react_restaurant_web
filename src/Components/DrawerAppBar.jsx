@@ -13,6 +13,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import "../Styles/drawerappbar.css";
+import { ThemeContext } from "..";
+import { DEFAULT_THEME } from "..";
 
 const drawerWidth = 240;
 const navItems = ["LA CARTE", "LE RESTAURANT", "CONTACT", "NEWS"];
@@ -26,75 +28,99 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <img src="/images/logo.png" alt="Logo" className="logo-image" />
+    <ThemeContext.Consumer>
+      {({ theme }) => (
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+          <img
+            src={
+              theme === DEFAULT_THEME
+                ? "/images/logo.png"
+                : "/images/logoBlack.png"
+            }
+            alt="Logo"
+            className="logo-image"
+          />
 
-      <Divider />
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
+          <Divider />
+          <List>
+            {navItems.map((item) => (
+              <ListItem key={item} disablePadding>
+                <ListItemButton sx={{ textAlign: "center" }}>
+                  <ListItemText primary={item} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      )}
+    </ThemeContext.Consumer>
   );
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <AppBar component="nav" sx={{ backgroundColor: "white" }}>
-        <Toolbar sx={{ justifyContent: "space-around" }}>
-          <IconButton
-            color="#000"
-            aria-label="open drawer"
-            onClick={handleDrawerToggle}
-            sx={{ display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
+    <ThemeContext.Consumer>
+      {({ theme }) => (
+        <Box sx={{ display: "flex" }}>
+          <CssBaseline />
+          <AppBar component="nav" sx={{ backgroundColor: "white" }}>
+            <Toolbar sx={{ justifyContent: "space-around" }}>
+              <IconButton
+                color="#000"
+                aria-label="open drawer"
+                onClick={handleDrawerToggle}
+                sx={{ display: { sm: "none" } }}
+              >
+                <MenuIcon />
+              </IconButton>
 
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <img src="/images/logo.png" alt="Logo" className="logo-image" />
+              <Box sx={{ display: { xs: "none", sm: "block" } }}>
+                <img
+                  src={
+                    theme === DEFAULT_THEME
+                      ? "/images/logo.png"
+                      : "/images/logoBlack.png"
+                  }
+                  alt="Logo"
+                  className="logo-image"
+                />
+              </Box>
+              <Box sx={{ display: { xs: "none", sm: "block" } }}>
+                {navItems.map((item) => (
+                  <Button key={item} sx={{ color: "#000" }}>
+                    {item}
+                  </Button>
+                ))}
+              </Box>
+            </Toolbar>
+          </AppBar>
+          <Box component="nav">
+            <Drawer
+              container={container}
+              variant="temporary"
+              open={mobileOpen}
+              onClose={handleDrawerToggle}
+              ModalProps={{
+                keepMounted: true, // Better open performance on mobile.
+              }}
+              sx={{
+                display: { xs: "block", sm: "none" },
+                "& .MuiDrawer-paper": {
+                  boxSizing: "border-box",
+                  width: drawerWidth,
+                },
+              }}
+            >
+              {drawer}
+            </Drawer>
           </Box>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#000" }}>
-                {item}
-              </Button>
-            ))}
+          <Box component="main" sx={{ p: 3, padding: 0 }}>
+            <Toolbar />
           </Box>
-        </Toolbar>
-      </AppBar>
-      <Box component="nav">
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </Box>
-      <Box component="main" sx={{ p: 3, padding: 0 }}>
-        <Toolbar />
-      </Box>
-    </Box>
+        </Box>
+      )}
+    </ThemeContext.Consumer>
   );
 }
 
