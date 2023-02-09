@@ -4,6 +4,7 @@ import Home from "./Pages/Home";
 import "./index.css";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { createContext, useState } from "react";
+import "./Components/i18n/i18n.jsx";
 
 export const DEFAULT_THEME = "light";
 

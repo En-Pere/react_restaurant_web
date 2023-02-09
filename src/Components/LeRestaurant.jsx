@@ -1,8 +1,10 @@
 import { Grid } from "@mui/material";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "../Styles/lerestaurant.css";
 
 function LeRestaurant() {
+  const { t, i18n } = useTranslation();
   return (
     <div className="lerestaurant-section">
       : Le Restaurant :
@@ -19,7 +21,8 @@ function LeRestaurant() {
             </div>
             Historia
             <p>
-              Crée par Jean Minchelli à la fin des années 60, homme de la mer et
+              {t("historia")}
+              {/* Crée par Jean Minchelli à la fin des années 60, homme de la mer et
               ami du Tout Paris en vogue, Le Duc fait partie de la Nouvelle
               Vague culinaire qui va déferler sur l’Hexagone: rompant avec les
               dogmes de la cuisine traditionnelle et bourgeoise, le restaurant
@@ -28,7 +31,7 @@ function LeRestaurant() {
               qu’apparurent les premiers poissons servis crus, du jamais vu
               alors! Cette cuisine très actuelle assure au « Duc » longévité et
               modernité. Signé Slavik, le décor d’origine teinté d’embruns ancre
-              le lieu dans un chic intemporel.
+              le lieu dans un chic intemporel. */}
             </p>
           </div>
         </Grid>

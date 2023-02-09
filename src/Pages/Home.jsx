@@ -6,6 +6,7 @@ import LeRestaurant from "../Components/LeRestaurant";
 import CarouselRest from "../Components/CarouselRest";
 import ContactSection from "../Components/ContactSection";
 import ThemeChange from "../Components/ThemeChange";
+import Translation from "../Components/i18n/Translation";
 
 function Home() {
   var itemsA = [
@@ -41,6 +42,7 @@ function Home() {
       <CarouselRest items={itemsB} />
       <ContactSection />
       <ThemeChange />
+      <Translation />
     </>
   );
 }
