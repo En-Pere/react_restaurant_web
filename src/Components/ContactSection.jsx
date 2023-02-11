@@ -4,7 +4,7 @@ import "../Styles/contactsection.css";
 
 function ContactSection() {
   return (
-    <div className="contact-section">
+    <div className="contact-section" id="contact">
       : Contact :
       <p>
         Restaurant Le Duc 243 bd Raspail 75014 PARIS Le Duc Du lundi au samedi

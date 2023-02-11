@@ -1,12 +1,11 @@
 import React from "react";
-import DrawerAppBar from "../Components/DrawerAppBar";
-import GridRestaurant from "../Components/GridRestaurant";
-import LaCarte2 from "../Components/LaCarte2";
-import LeRestaurant from "../Components/LeRestaurant";
-import CarouselRest from "../Components/CarouselRest";
-import ContactSection from "../Components/ContactSection";
-import ThemeChange from "../Components/ThemeChange";
-import Translation from "../Components/i18n/Translation";
+import GridRestaurant from "../../Components/GridRestaurant";
+import LaCarte2 from "../../Components/LaCarte2";
+import LeRestaurant from "../../Components/LeRestaurant";
+import CarouselRest from "../../Components/CarouselRest";
+import ContactSection from "../../Components/ContactSection";
+import ThemeChange from "../../Components/ThemeChange";
+import Translation from "../../Components/i18n/Translation";
 
 function Home() {
   var itemsA = [
@@ -34,7 +33,6 @@ function Home() {
 
   return (
     <>
-      <DrawerAppBar />
       <CarouselRest items={itemsA} />
       <GridRestaurant />
       <LaCarte2 />

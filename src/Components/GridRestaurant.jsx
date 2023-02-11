@@ -4,7 +4,7 @@ import "../Styles/gridrestaurant.css";
 function GridRestaurant() {
   return (
     <>
-      <div className="grid-container">
+      <div className="grid-container" id="restaurantleduc">
         <div className="column-a">Restaurant Le Duc</div>
         <span className="separator-column"></span>
         <div className="column-b">

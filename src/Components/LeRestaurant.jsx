@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 import "../Styles/lerestaurant.css";
 
 function LeRestaurant() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
-    <div className="lerestaurant-section">
+    <div className="lerestaurant-section" id="lerestaurant">
       : Le Restaurant :
       <Grid
         container
@@ -42,7 +42,8 @@ function LeRestaurant() {
             </div>
             Productos
             <p>
-              Depuis sa création, qualité et fraicheur sont les maitres mots de
+              {t("productos")}
+              {/* Depuis sa création, qualité et fraicheur sont les maitres mots de
               cet établissement de haute lignée. Poissons, coquillages et
               crustacés sont issus des cotes françaises, sortis de l’eau par de
               petits pêcheurs. La carte suit les marées et les saisons, pour ne
@@ -51,7 +52,7 @@ function LeRestaurant() {
               préparations et la justesse des cuissons. Quant aux épices et aux
               herbes aromatiques, elles savent révéler la vraie nature de ces
               produits uniques, qu’ils soient luxueux comme le turbot ou
-              populaires comme la sardine.
+              populaires comme la sardine. */}
             </p>
           </div>
         </Grid>
@@ -62,12 +63,13 @@ function LeRestaurant() {
             </div>
             Equipo
             <p>
-              Les équipes se succèdent chez Le Duc mais l'esprit Minchelli est
+              {t("equipo")}
+              {/* Les équipes se succèdent chez Le Duc mais l'esprit Minchelli est
               toujours là. Dominique Minchelli secondé par Pascal Hélard et
               Senthuran Vignesvaran en cuisine fait en sorte que esprit de
               famille et modernité aillent de pair . L'équipe de salle est
               présente au rendez vous et s'occupe de tous les clients avec la
-              même attention , que ce soit de vieux habitués ou des futurs
+              même attention , que ce soit de vieux habitués ou des futurs */}
             </p>
           </div>
         </Grid>

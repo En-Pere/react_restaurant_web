@@ -15,9 +15,18 @@ import Button from "@mui/material/Button";
 import "../Styles/drawerappbar.css";
 import { ThemeContext } from "..";
 import { DEFAULT_THEME } from "..";
+import { NavLink } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 const drawerWidth = 240;
-const navItems = ["LA CARTE", "LE RESTAURANT", "CONTACT", "NEWS"];
+
+const navItems = [
+  { name: "LA CARTE", path: "/#lacarte" },
+  { name: "LE RESTAURANT", path: "/#lerestaurant" },
+  { name: "CONTACT", path: "/#contact" },
+  { name: "NEWS", path: "/#restaurantleduc" },
+  { name: "RESERVA", path: "/reserva" },
+];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -31,22 +40,31 @@ function DrawerAppBar(props) {
     <ThemeContext.Consumer>
       {({ theme }) => (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-          <img
-            src={
-              theme === DEFAULT_THEME
-                ? "/images/logo.png"
-                : "/images/logoBlack.png"
-            }
-            alt="Logo"
-            className="logo-image"
-          />
+          <NavLink
+            className={({ isActive, isPending }) => {
+              return isActive ? "activeNav" : isPending ? "pending" : "";
+            }}
+            to="/"
+          >
+            <img
+              src={
+                theme === DEFAULT_THEME
+                  ? "/images/logo.png"
+                  : "/images/logo.png"
+              }
+              alt="Logo"
+              className="logo-image"
+            />
+          </NavLink>
 
           <Divider />
           <List>
-            {navItems.map((item) => (
-              <ListItem key={item} disablePadding>
+            {navItems.map(({ name, path }, i) => (
+              <ListItem key={i} disablePadding>
                 <ListItemButton sx={{ textAlign: "center" }}>
-                  <ListItemText primary={item} />
+                  <Link to={path}>
+                    <ListItemText primary={name} />
+                  </Link>
                 </ListItemButton>
               </ListItem>
             ))}
@@ -76,20 +94,27 @@ function DrawerAppBar(props) {
               </IconButton>
 
               <Box sx={{ display: { xs: "none", sm: "block" } }}>
-                <img
-                  src={
-                    theme === DEFAULT_THEME
-                      ? "/images/logo.png"
-                      : "/images/logoBlack.png"
-                  }
-                  alt="Logo"
-                  className="logo-image"
-                />
+                <NavLink
+                  className={({ isActive, isPending }) => {
+                    return isActive ? "activeNav" : isPending ? "pending" : "";
+                  }}
+                  to="/"
+                >
+                  <img
+                    src={
+                      theme === DEFAULT_THEME
+                        ? "/images/logo.png"
+                        : "/images/logo.png"
+                    }
+                    alt="Logo"
+                    className="logo-image"
+                  />
+                </NavLink>
               </Box>
               <Box sx={{ display: { xs: "none", sm: "block" } }}>
-                {navItems.map((item) => (
-                  <Button key={item} sx={{ color: "#000" }}>
-                    {item}
+                {navItems.map(({ name, path }, i) => (
+                  <Button key={i} sx={{ color: "#000" }}>
+                    <Link to={path}>{name}</Link>
                   </Button>
                 ))}
               </Box>

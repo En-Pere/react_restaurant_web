@@ -5,10 +5,22 @@ import { ThemeContext } from "..";
 
 function ThemeChange() {
   return (
-    <Box>
+    <Box
+      sx={{
+        background: "#f3ece7",
+        textAlign: "center",
+      }}
+    >
       <ThemeContext.Consumer>
         {({ theme, changeTheme }) => (
-          <Button onClick={changeTheme}>{theme}</Button>
+          <Button
+            sx={{
+              fontSize: "15px",
+            }}
+            onClick={changeTheme}
+          >
+            {theme}
+          </Button>
         )}
       </ThemeContext.Consumer>
     </Box>

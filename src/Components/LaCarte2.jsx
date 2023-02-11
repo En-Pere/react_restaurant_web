@@ -1,10 +1,10 @@
-import { Grid } from "@mui/material"; 
+import { Grid } from "@mui/material";
 import React from "react";
 import "../Styles/lacarte2.css";
 
 function LaCarte2() {
   return (
-    <div className="lacarte-background">
+    <div className="lacarte-background" id="lacarte">
       : La Carte :
       <img src="/images/p-1.png" alt="fish-one" id="fish-one" />
       <img src="/images/p-2.png" alt="fish-two" id="fish-two" />
