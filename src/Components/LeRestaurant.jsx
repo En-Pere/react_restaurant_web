@@ -7,7 +7,8 @@ function LeRestaurant() {
   const { t } = useTranslation();
   return (
     <div className="lerestaurant-section" id="lerestaurant">
-      : Le Restaurant :
+      {t("lerestaurant")}
+      {/* : Le Restaurant : */}
       <Grid
         container
         spacing={4}
@@ -19,9 +20,10 @@ function LeRestaurant() {
             <div className="lerestaurant-image-container">
               <img src="./images/h-1.png" alt="historia foto" />
             </div>
-            Historia
+            {t("historia")}
+            {/* Historia */}
             <p>
-              {t("historia")}
+              {t("texthistoria")}
               {/* Crée par Jean Minchelli à la fin des années 60, homme de la mer et
               ami du Tout Paris en vogue, Le Duc fait partie de la Nouvelle
               Vague culinaire qui va déferler sur l’Hexagone: rompant avec les
@@ -40,9 +42,10 @@ function LeRestaurant() {
             <div className="lerestaurant-image-container">
               <img src="./images/h-2.png" alt="productos foto" />
             </div>
-            Productos
+            {t("productos")}
+            {/* Productos */}
             <p>
-              {t("productos")}
+              {t("textproductos")}
               {/* Depuis sa création, qualité et fraicheur sont les maitres mots de
               cet établissement de haute lignée. Poissons, coquillages et
               crustacés sont issus des cotes françaises, sortis de l’eau par de
@@ -61,9 +64,10 @@ function LeRestaurant() {
             <div className="lerestaurant-image-container">
               <img src="./images/h-3.png" alt="equipo foto" />
             </div>
-            Equipo
+            {t("equipo")}
+            {/* Equipo */}
             <p>
-              {t("equipo")}
+              {t("textequipo")}
               {/* Les équipes se succèdent chez Le Duc mais l'esprit Minchelli est
               toujours là. Dominique Minchelli secondé par Pascal Hélard et
               Senthuran Vignesvaran en cuisine fait en sorte que esprit de
